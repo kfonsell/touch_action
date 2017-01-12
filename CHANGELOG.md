@@ -1,3 +1,7 @@
+## v1.4.0
+
+* Supports Watir version >= 6.0.0
+
 ## v1.3.3
 
 * Added support to capybara native elements

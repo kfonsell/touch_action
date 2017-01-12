@@ -1,8 +1,8 @@
 require "touch_action/version"
 
-if Gem::Specification::find_all_by_name('watir-webdriver').any?
-  require 'touch_action/watir-webdriver'
-end 
+if Gem::Specification::find_all_by_name('watir').any?
+  require 'touch_action/watir'
+end
 
 if Gem::Specification::find_all_by_name('selenium-webdriver').any?
   require 'touch_action/selenium-webdriver'

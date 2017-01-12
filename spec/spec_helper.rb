@@ -3,7 +3,7 @@ require "pry"
 require 'rack'
 require 'thin'
 require 'touch_action'
-require 'watir-webdriver'
+require 'watir'
 require 'capybara'
 require 'capybara/rspec'
 
@@ -49,7 +49,7 @@ RSpec.configure do |config|
     if ENV['PLATFORM']
       @browser = Watir::Browser.new(Selenium::WebDriver.for(:remote, :desired_capabilities => capabilities, :url => ENV['appium_url']))
     else
-      case example.metadata[:use_webdriver] 
+      case example.metadata[:use_webdriver]
       when :selenium
         @browser = Selenium::WebDriver.for :firefox
       when :capybara
